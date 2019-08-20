@@ -2,5 +2,8 @@
     "api_url": "https://dev.azure.com/netapp-cbs/",
     "authToken": "kkdv3zpgtqxpx2v57sxgfoat5aebqwin4eujphv5fwttbpgix2ea",
     "project": "QuoteEdge",
-    "query": "QE_Open_S3_S4"
+    "queryDetails": {
+        "queryName": "QE_Open_S3_S4",
+        "queryPath": "Shared Queries"
+    }
 }

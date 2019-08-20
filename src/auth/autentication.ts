@@ -12,20 +12,10 @@ export class Authentication {
 	public async getApi(): Promise<devOps.WebApi> {
 		return new Promise<devOps.WebApi>(async (resolve, reject) => {
 			try {
-				let authHandler = devOps.getPersonalAccessTokenHandler(
-					this.config.authToken
-				);
-				let vsts: devOps.WebApi = new devOps.WebApi(
-					this.config.api_url,
-					authHandler,
-					undefined
-				);
+				let authHandler = devOps.getPersonalAccessTokenHandler(this.config.authToken);
+				let vsts: devOps.WebApi = new devOps.WebApi(this.config.api_url, authHandler, undefined);
 				let conn: lim.ConnectionData = await vsts.connect();
-				// if (conn.authenticatedUser) {
 				console.log(`Hello ${conn.authenticatedUser.providerDisplayName}`);
-				// } else {
-				// console.log('Hello Nothign');
-				// }
 				resolve(vsts);
 			} catch (err) {
 				reject(err);
