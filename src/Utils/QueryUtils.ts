@@ -1,4 +1,4 @@
-import { Config } from '../config';
+import { Config } from '../Config/Config';
 // import { Authentication } from '../auth/autentication';
 import * as devOps from 'azure-devops-node-api';
 import * as WorkItemTrackingInterfaces from 'azure-devops-node-api/interfaces/WorkItemTrackingInterfaces';

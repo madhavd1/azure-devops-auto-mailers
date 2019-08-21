@@ -3,7 +3,25 @@
     "authToken": "kkdv3zpgtqxpx2v57sxgfoat5aebqwin4eujphv5fwttbpgix2ea",
     "project": "QuoteEdge",
     "queryDetails": {
-        "queryName": "QE_Open_S3_S4",
-        "queryPath": "Shared Queries"
+        "queryName": "Open_S3_R54",
+        "queryPath": "My Queries"
+    },
+    "mailConfig": {
+        "smtpHost": "smtp.corp.netapp.com",
+        "smtpPort": 25,
+        "MailFrom": "\"S3 Defect Tracking\" <s3_qe_config_defects@netapp.com>",
+        "primaryMailTo": "ng-nb-config-dev@netapp.com",
+        "groupby": "System.State",
+        "complexFields": [{
+                "fieldName": "Custom.DevelopedBy",
+                "fieldDisplay": "displayName"
+            },
+            {
+                "fieldName": "System.AssignedTo",
+                "fieldDisplay": "displayName"
+            }
+        ],
+        "mailBody": "This is an auto-mailer",
+        "tableStyle": "<style type=\"text/css\"> .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;} .tg td{text-align:left;vertical-align:top;font-family:Arial, sans-serif;font-size:14px;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;} .tg th{text-align:left;vertical-align:top;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#409cff;}</style>"
     }
 }

@@ -1,6 +1,6 @@
 import * as devOps from 'azure-devops-node-api';
 import * as lim from 'azure-devops-node-api/interfaces/LocationsInterfaces';
-import { Config } from '../config';
+import { Config } from '../Config/Config';
 
 export class Authentication {
 	private config: Config;
