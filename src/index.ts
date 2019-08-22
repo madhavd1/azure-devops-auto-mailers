@@ -30,28 +30,6 @@ async function main() {
 		await mailUtils.sendMail(mailBody);
 		console.log(idArray);
 	});
-	// const queryList: WorkItemTrackingInterfaces.QueryHierarchyItem[] = await witApi.getQueries(
-	// 	config.project,
-	// 	WorkItemTrackingInterfaces.QueryExpand.None,
-	// 	1
-	// );
-	// config.queryDetails.queryPath.split("/").forEach(
-	// 	(pathElement) => {
-	// 			let queryItem: WorkItemTrackingInterfaces.QueryHierarchyItem[] = queryList.filter(query=>{
-	// 	query.name==config.queryDetails.
-	// });
-	// 	}
-	// )
-	// let queryItem: WorkItemTrackingInterfaces.QueryHierarchyItem[] = queryList.filter(query=>{
-	// 	query.name==config.queryDetails.
-	// });
-
-	// const queryResult: WorkItemTrackingInterfaces.WorkItemQueryResult = await witApi.queryById(
-	//   '7bb7d500-866f-451a-9d8c-f743e2239539'
-	// );
-	// console.log(JSON.stringify(queryResult));
-
-	
 }
 
 main().catch(console.error);
