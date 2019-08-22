@@ -2,7 +2,7 @@ import * as devOps from 'azure-devops-node-api';
 // import * as CoreApi from 'azure-devops-node-api/CoreApi';
 import * as WorkItemTrackingInterfaces from 'azure-devops-node-api/interfaces/WorkItemTrackingInterfaces';
 import * as WorkItemTrackingApi from 'azure-devops-node-api/WorkItemTrackingApi';
-import { Authentication } from './Auth/autentication';
+import { Authentication } from './Auth/Authentication';
 import { Config } from './Config/Config';
 import { QueryUtils } from './Utils/QueryUtils';
 import { MailBuilder } from './Utils/MailBuilder';
