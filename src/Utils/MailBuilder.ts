@@ -1,6 +1,6 @@
 import { WorkItem } from 'azure-devops-node-api/interfaces/WorkItemTrackingInterfaces';
-import { MailConfig } from '../Config/mailConfig';
 import { Config } from '../Config/Config';
+import {MailConfig} from '../Config/MailConfig';
 
 export class MailBuilder {
 	private wiList: WorkItem[];
