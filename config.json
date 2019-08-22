@@ -21,7 +21,7 @@
                 "fieldDisplay": "displayName"
             }
         ],
-        "mailBody": "This is an auto-mailer",
+        "mailBody": "Hi All,<br>PFB List of defects assigned to developers but have missing LOE.<br>Request developers to please analyze the defects and update the same in Azure DevOps.",
         "tableStyle": "<style type=\"text/css\"> .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;} .tg td{text-align:left;vertical-align:top;font-family:Arial, sans-serif;font-size:14px;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;} .tg th{text-align:left;vertical-align:top;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#409cff;}</style>"
     }
 }

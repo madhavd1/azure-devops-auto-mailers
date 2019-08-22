@@ -1,6 +1,6 @@
 import { WorkItem } from 'azure-devops-node-api/interfaces/WorkItemTrackingInterfaces';
 import { Config } from '../Config/Config';
-import {MailConfig} from '../Config/MailConfig';
+import { MailConfig } from '../Config/MailConfig';
 
 export class MailBuilder {
 	private wiList: WorkItem[];
@@ -35,29 +35,29 @@ export class MailBuilder {
 		let retVal = '';
 		if (grpByColVals) {
 			for (const value of grpByColVals) {
-				retVal = retVal + (`<br><br><h4>${value}</h4><table class="tg">`);
+				retVal = retVal + `<br><br><h4>${value}</h4><table class="tg">`;
 				retVal = retVal + '<tr>';
 				for (const field of this.fieldsList) {
-					retVal = retVal + ('<th>' + field + '</th>');
+					retVal = retVal + ('<th>' + field.substring(field.indexOf('.') + 1, field.length) + '</th>');
 				}
 				retVal = retVal + '</tr>';
 				let group = this.wiList.filter(x => x.fields[this.mailConfig.groupby] === value);
 				for (const wit of group) {
 					retVal = retVal + '<tr>' + this.createTableFromWorkItemFields(wit) + '</tr>';
 				}
-				retVal = retVal + "</table>"
+				retVal = retVal + '</table>';
 			}
 		} else {
-			retVal = retVal + (`<br><br><table class="tg">`);
+			retVal = retVal + `<br><br><table class="tg">`;
 			retVal = retVal + '<tr>';
 			for (const field of this.fieldsList) {
-				retVal = retVal + ('<th>' + field + '</th>');
+				retVal = retVal + ('<th>' + field.substring(field.indexOf('.') + 1, field.length) + '</th>');
 			}
 			retVal = retVal + '</tr>';
 			for (const wi of this.wiList) {
 				retVal = retVal + '<tr>' + this.createTableFromWorkItemFields(wi) + '</tr>';
 			}
-			retVal = retVal + "</table>"
+			retVal = retVal + '</table>';
 		}
 		return retVal;
 	}
@@ -69,7 +69,8 @@ export class MailBuilder {
 			)[0];
 			const complexObj = wi.fields[field];
 			if (complexField) {
-				retVal = retVal + `<td>${complexObj[complexField.fieldDisplay] ? complexObj[complexField.fieldDisplay] : ''}</td>`;
+				retVal =
+					retVal + `<td>${complexObj[complexField.fieldDisplay] ? complexObj[complexField.fieldDisplay] : ''}</td>`;
 			} else {
 				retVal = retVal + `<td>${wi.fields[field] ? wi.fields[field] : ''}</td>`;
 			}
