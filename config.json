@@ -1,27 +1,27 @@
 {
-    "api_url": "https://dev.azure.com/netapp-cbs/",
-    "authToken": "kkdv3zpgtqxpx2v57sxgfoat5aebqwin4eujphv5fwttbpgix2ea",
-    "project": "QuoteEdge",
+    "api_url": "https://dev.azure.com/{yourOrg}/",
+    "authToken": "yourAzureAuthToken",
+    "project": "yourProject",
     "queryDetails": {
-        "queryName": "Open_S3_R54",
-        "queryPath": "My Queries"
+        "queryName": "yourQueryName",
+        "queryPath": "path/to/your/query"
     },
     "mailConfig": {
-        "smtpHost": "smtp.corp.netapp.com",
+        "smtpHost": "smtp.server.com",
         "smtpPort": 25,
-        "MailFrom": "\"S3 Defect Tracking\" <s3_qe_config_defects@netapp.com>",
-        "primaryMailTo": "ng-nb-config-dev@netapp.com",
-        "groupby": "System.State",
+        "MailFrom": "\"Name\" <dummyId@mail.com>",
+        "primaryMailTo": "receiver@mail.com",
+        "groupby": "groupByPropertyName",
         "complexFields": [{
-                "fieldName": "Custom.DevelopedBy",
-                "fieldDisplay": "displayName"
+                "fieldName": "Custom.fieldName",
+                "fieldDisplay": "fieldPropertyToCapture"
             },
             {
-                "fieldName": "System.AssignedTo",
-                "fieldDisplay": "displayName"
+                "fieldName": "Custom.fieldName2",
+                "fieldDisplay": "fieldPropertyToCapture2"
             }
         ],
-        "mailBody": "Hi All,<br>PFB List of defects assigned to developers but have missing LOE.<br>Request developers to please analyze the defects and update the same in Azure DevOps.",
+        "mailBody": "THIS TEXT WILL BE ADDED TO THE BODY OF THE EMAIL",
         "tableStyle": "<style type=\"text/css\"> .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;} .tg td{text-align:left;vertical-align:top;font-family:Arial, sans-serif;font-size:14px;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;} .tg th{text-align:left;vertical-align:top;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#409cff;}</style>"
     }
 }

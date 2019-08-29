@@ -19,8 +19,8 @@ export class MailUtils {
 		// send mail with defined transport object
 		let mail = await transporter.sendMail({
 			from: this.mailConfig.MailFrom, // sender address
-			to: 'dmadhav@netapp.com', // list of receivers
-			subject: 'S3 Defect Summary', // Subject line
+			to: 'madhav@mail.com', // list of receivers
+			subject: 'yourSubjcet', // Subject line
 			// text: 'Hello world?', // plain text body
 			html: mailBody,
 		});
